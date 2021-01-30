@@ -21,6 +21,10 @@
         display: none;
     }
 
+    .navigation li a {
+        padding: 2rem 1.5rem;
+    }
+
     .responsive li {
         display: none;
     }
