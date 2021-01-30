@@ -13,7 +13,7 @@ main, nav, h2, footer {
 }
 
 header, footer {
-    background-color: #487CAC;
+    background-color: #6895c0;
     color: white;
 }
 
@@ -108,6 +108,7 @@ h2 {
     flex: 1 1 100%;
     padding-right: 0.4rem;
     padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
 }
 
 footer {
