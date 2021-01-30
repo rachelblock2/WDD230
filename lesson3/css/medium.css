@@ -2,6 +2,7 @@
     nav ul {
         display: flex;
         padding: 0rem;
+        align-items: center;
     }
 
     nav ul li {
