@@ -22,6 +22,7 @@
     }
 
     .navigation li a {
+        flex: 1 1 auto;
         padding: 2rem 1.5rem;
     }
 
