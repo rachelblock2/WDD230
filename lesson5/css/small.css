@@ -1,0 +1,124 @@
+body {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #3D3D3D;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    background-color: #F1F5F9;
+}
+
+main, nav, h2, footer {
+    margin: 1.25rem auto;
+    max-width: 760px;
+}
+
+header, footer {
+    background-color: #6895c0;
+    color: white;
+}
+
+header {
+    margin-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+    margin-right: 1.25rem;
+    margin-left: 1.25rem;
+    max-width: 760px;
+    margin: auto;
+}
+
+nav {
+    background-color: #487CAC;
+    margin-top: 0;
+}
+
+.navigation {
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li:first-child {
+    display: block;
+}
+
+.navigation li{
+    display: none;
+}
+
+.responsive li {
+    display: block;
+    list-style-type: none;
+    text-align: center;
+}
+
+.navigation li a {
+    padding: 2rem 1.5rem;
+    display: block;
+    color: #F1F5F9;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navigation li a:hover {
+    background-color:#F1F5F9;
+    color: #3D3D3D;
+  }
+
+.navigation li a:active {
+    color: #F4B490;
+  }
+
+h1 {
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    font-size: 2.5rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    align-self: center;
+    text-shadow: 2px 2px #3D3D3D;
+    text-decoration: underline;
+    padding-top: 0.8rem;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.3rem;
+}
+
+.container {
+    margin: 1.25rem;
+    padding: 2rem;
+    border: 3px dashed #3D3D3D;
+    border-radius: 1rem;
+}
+
+#logo_image {
+    height: auto; 
+    width: auto;
+    max-width: 100px; 
+    max-height: 100px;
+    align-self: center;
+    flex: 1 1 100%;
+    padding-right: 0.4rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+footer {
+    margin-bottom: 0;
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+footer a {
+    color: white;
+}
