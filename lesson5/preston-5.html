@@ -15,27 +15,84 @@
     <link href="css/large.css" rel="stylesheet" />
   </head>
   <body>
+    <div>
+      <p id = "pancakes"></p>
+    </div>
     <header>
         <img id = "logo_image" src = "images/website_icon.png" alt = "Website logo"/>
-        <h1>Weatheryourlife</h1>
-    </header>
+        <div>
+          <h1>Weatheryourlife</h1>
+          <p id="slogan">Weathering life together</p>
+        </div>
+      </header>
     <nav>
       <ul class="navigation">
         <li><a class="hamburger_menu" href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
-        <li><a href="preston-4.html">Home</a></li>
-        <li><a href="#">Preston</a></li>
-        <li><a href="#">Soda Springs</a></li>
-        <li><a href="#">Fish Haven</a></li>
-        <li><a href="#">Storm Center</a></li>
-        <li><a href="#">Gallery</a></li>
+        <li><a class = "button" href="#">Home</a></li>
+        <li><a class = "button" href="#">Preston</a></li>
+        <li><a class = "button" href="#">Soda Springs</a></li>
+        <li><a class = "button" href="#">Fish Haven</a></li>
+        <li><a class = "button" href="#">Storm Center</a></li>
+        <li><a class = "button" href="#">Gallery</a></li>
       </ul>
     </nav>
     <main>
         <h2>Preston, Idaho</h2>
-        <div class="container">Hero with Weather Summary</div>
-        <div class="container">5 day forecast</div>
-        <div class="container">Article</div>
-        <div class="container">Contact Information</div>
+        <div class="hero_container">
+          <div id = "current_info">
+            <p id = "info_title">Weather Summary</p>
+            <div id = "flex_info">
+              <div id = "right">
+                <p>Currently:</p>
+                <p>High:</p>
+                <p>Wind Chill:</p>
+                <p>Humidity:</p>
+                <p>Wind Speed:</p>
+              </div>
+              <div id = "left">
+                <p>Sunny</p>
+                <p>76 F&#176;</p>
+                <p>7&#176;</p>
+                <p>69%</p>
+                <p>5 mph</p>
+              </div>
+            </div>
+          </div>
+          <img id = "hero_image" src="images/hero_image (2).jpg" alt = "Preston Town Main Image"/>
+        </div>
+        <div class="day_container">
+          <div class="day_item"><p>Monday</p><img src="images/sun_icon.png"/><p>76&#176;</p></div>  
+          <div class="day_item"><p>Tuesday</p><img src="images/sun_icon.png"/><p>72&#176;</p></div>
+          <div class="day_item"><p class = "fix_size">Wednesday</p><img src="images/sun_icon.png"/><p>75&#176;</p></div>
+          <div class="day_item"><p>Thursday</p><img src="images/sun_icon.png"/><p>77&#176;</p></div>
+          <div class="day_item"><p>Friday</p><img src="images/sun_icon.png"/><p>73&#176;</p></div>
+        </div>
+        <div class="article_container">
+          <img id = "article_image" src = "images/article_image.jpg" alt = "Stock image of couple"/>
+          <h3>Article Title</h3>
+          <h4>Author Name</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+          in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+          officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, 
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+          ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="container">
+          <div class = "contact_info">
+            <h3 id = "contact_name">Weatheryourlife</h3>
+              <p id = "list_map">30 N 1st E</p>
+              <p>Preston, ID 83263</p>
+              <p id = "list_phone">999.999.9999</p>             
+              <p id = "list_email">weatheryourlife@emailforreal.com</p>
+            </div>
+          </div>
+          <img id = "map" src = "images/map.jpg" alt = "Map of Preston"/>
+        </div>
     </main>
     <footer>
       <div>&copy; <span id="currentyear"></span> | Rachel Lofgran | Utah | <a href="https://www.byui.edu/online">BYUI Online Learning</a>

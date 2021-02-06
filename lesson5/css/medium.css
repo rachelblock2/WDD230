@@ -37,6 +37,28 @@
         max-height: 125px;
     }
 
+    #current_info {
+        width: 235px;
+        padding: 1rem;
+        top: 75%;
+        left: 17%;
+        position: absolute;
+    }
+    
+    #info_title{
+        font-size: 1.1rem;
+        margin: 0.2rem 1rem;
+    }
+    
+    #flex_info {
+        display: flex;
+        justify-content: center;
+    }
+    
+    #flex_info p {
+        font-size: 0.8rem;
+    }
+
     h1 {
         font-size: 3rem;
         margin-left: 1rem;
@@ -47,5 +69,76 @@
         font-size: 2rem;
         margin-left: 1.5rem;
         margin-right: 1.5rem;
+    }
+
+    h3 {
+        margin: 1rem 1rem 0.5rem 1rem;
+    }
+    
+    .day_container, .article_container, .container, .hero_container {
+        margin: 0.3rem auto 1rem auto;
+        padding: 0.5rem;
+        width: auto;
+    }
+
+    .day_item {
+        background-color:#F1F5F9;
+        padding: 0.4rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-align: center;
+        border: none;
+    }
+    
+    .day_item img, .fix_size img {
+        width: 50%;
+    }
+
+    .fix_size {
+        font-size: 1.2rem;
+        margin-top: 1.25rem;
+    }
+
+    .article_container {
+        box-shadow: 1px 1px 8px #3D3D3D;
+        margin-bottom: 1rem;
+    }
+
+    .article_container #article_image {
+        width: 40%;
+        float: right;
+        margin: 1rem 2rem 1rem 2rem;
+        border: 4px solid #F4B490;
+    }
+
+    .article_container p{
+        margin: 0.5rem 1rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #map {
+        width: 44%;
+        margin-bottom: 1rem;
+        align-self: center;
+    }
+    
+    .contact_info {
+        margin: 1rem 2rem;
+        align-self: center;
+    }
+    
+    #contact_name {
+        margin: 0.5rem;
+        font-size: 2.3rem;
+    }
+    
+    .contact_info p {
+        margin: 0.5rem;
+        font-size: 1.4rem;
     }
 }
