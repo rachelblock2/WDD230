@@ -8,7 +8,8 @@ if (weekday == "Friday") {
     message1 = "Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park.";
     document.querySelector("#pancakes").textContent = message1
 } else {
-  document.querySelector("#pancakes").innerHTML = "";
+  let pancakes = document.querySelector("#pancakes");
+  pancakes.remove()
 }
 
 // Creates a hamburger button for small css file
