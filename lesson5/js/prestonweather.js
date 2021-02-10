@@ -24,9 +24,3 @@ window.onresize = () => {if (window.innerWidth > 760) mainnav.classList.remove('
 //Creates date object updated daily
 const yearoptions = {year: "numeric", month: "long", day: "2-digit"}
 document.getElementById("currentyear").textContent = new Date().toLocaleDateString("en-US", yearoptions);
-
-// Add active class to the current button (highlight it)
-let holder = document.querySelector(".navigation");
-let btns = document.querySelector(".button");
-
-btns.addEventListener('click', () => {btns.classList.toggle('active')}, false);
