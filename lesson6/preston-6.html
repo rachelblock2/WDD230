@@ -74,7 +74,13 @@
           <div class="day_item"><p>Friday</p><img src="images/sun_icon.png" alt = "Sun icon for the weather"/><p>73&#176;</p></div>
         </div>
         <div class="article_container">
-          <img id = "article_image" src = "images/article_image.jpg" alt = "Stock image of couple"/>
+          <picture>
+            <source srcset="images/article_image_medium.jpg" media="(min-width:
+            37.5em) and (max-width: 59.9em)">
+            <source srcset="images/article_image_large.jpg" media="(min-width:
+            60em)">
+            <img id = "article_image" src = "images/article_image_small.jpg" alt = "Stock image of couple"/>
+          </picture>
           <h3>Article Title</h3>
           <h4>Author Name</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
