@@ -1,4 +1,17 @@
 @media only screen and (min-width: 60em) {
+    #large_caption {
+        display: block;
+        position: absolute;
+        top: 80%;
+        left: 60%;
+        font-size: 1.8rem;
+        color: rgb(253, 87, 87);
+    }
+
+    #small_caption, #medium_caption {
+        display: none;
+    }
+
     #current_info {
         background-color: #487CAC;
         opacity: 88%;

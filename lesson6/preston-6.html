@@ -42,17 +42,19 @@
           <div id = "current_info">
             <p id = "info_title">Weather Summary</p>
             <div id = "flex_info">
+              <span id = "temp_calc">45</span>
+              <span id = wind_speed_calc>10</span>
               <div id = "right">
                 <p>Currently:</p>
-                <p>High:</p>
+                <p>Temperature:</p>
                 <p>Wind Chill:</p>
                 <p>Humidity:</p>
                 <p>Wind Speed:</p>
               </div>
               <div id = "left">
                 <p>Sunny</p>
-                <p>76 F&#176;</p>
-                <p>7&#176;</p>
+                <p>45&#176;</p>
+                <p id = "total_wind_speed"></p>
                 <p>69%</p>
                 <p>5 mph</p>
               </div>
@@ -64,6 +66,9 @@
             <source srcset="images/idaho_large.jpg" media="(min-width:
             60em)">
             <img id = "hero_image" src="images/idaho_small.jpg" alt = "Preston Town Main Image"/>
+            <figcaption id = "small_caption">Small</figcaption>
+            <figcaption id = "medium_caption">Medium</figcaption>
+            <figcaption id = "large_caption">Large</figcaption>
           </picture>
         </div>
         <div class="day_container">
@@ -110,5 +115,6 @@
       </div>
       </footer>
   <script src="js/prestonweather.js"></script>
+  <script src="js/windchill.js"></script>
   </body>
 </html>
