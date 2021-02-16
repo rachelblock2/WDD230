@@ -1,0 +1,9 @@
+body {
+    margin: 1.25rem auto;
+    max-width: 900px;
+}
+
+video {
+    width: 100%;
+    margin: auto;
+}
