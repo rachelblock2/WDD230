@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href = "lazyload.css" rel = "stylesheet">
+</head>
+<body>
+    <h1>Progressive Loading (Images)</h1>
+    <main>
+    <picture>
+        <img src = "images/placeholder.png" data-src = "images/white_flower.jpg" alt = "White Flower"/>
+    </picture>
+    <picture>
+        <img src = "images/placeholder.png" data-src="images/pink_flower.jpg" alt = "Pink Flower"/>
+    </picture>
+    <picture>
+        <img src = "images/placeholder.png" data-src="images/bear.jpg" alt = "Person sitting in large stuffed bear"/>
+    </picture>
+    <picture>
+        <img src = "images/placeholder.png" data-src="images/dark_pink_flower.jpg" alt = "Dark Pink Flower"/>
+    </picture>
+    <picture>
+        <img src = "images/placeholder.png" data-src="images/tulips.jpg" alt = "Tulips"/>
+    </picture>
+    </main>
+    <script src="lazyload.js"></script>
+</body>
+</html>
