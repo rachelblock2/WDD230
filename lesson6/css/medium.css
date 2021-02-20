@@ -154,4 +154,10 @@
         margin: 0.5rem;
         font-size: 1.4rem;
     }
+
+/* CSS for gallery images */
+
+    #gallery_section {
+    grid-template-columns: 1fr 1fr;
+    }
 }
