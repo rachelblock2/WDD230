@@ -37,11 +37,11 @@ thead tr:not(:first-child) {
     color: white;
 }
 
-.light_gray {
+tbody tr:nth-child(odd) {
     background-color: #e7f0ed;
 }
 
-.light_green {
+tbody tr:nth-child(even) {
     background-color: #e7ffed;
 }
 
@@ -49,7 +49,7 @@ thead tr:not(:first-child) {
     font-style: italic;
 }
 
-#color_highlight {
+.color_highlight {
     background-color: #628ca6;
     color: white;
 }
