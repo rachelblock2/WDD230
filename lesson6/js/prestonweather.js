@@ -1,4 +1,4 @@
-// Creates banner for free pancake reminder on Friday
+// ------------- Banner for free pancakes on Friday ----------//
 let date = new Date();
 let weekday = date.toLocaleDateString("default", { weekday: 'long' });
 
@@ -12,7 +12,10 @@ if (weekday == "Friday") {
   pancakes.remove()
 }
 
-// Creates a hamburger button for small css file
+
+
+// ------------- Hamburger button for small CSS ----------//
+
 const hambutton = document.querySelector('.hamburger_menu');
 const mainnav = document.querySelector('.navigation')
 
@@ -27,8 +30,8 @@ document.getElementById("currentyear").textContent = new Date().toLocaleDateStri
 
 
 
+// ------------- Lazy Loading of Images ----------//
 
-//Lazy Loading of gallery images
 let imagesToLoad = document.querySelectorAll('img[data-src]');
 
 const imgOptions = {
@@ -69,3 +72,20 @@ imagesToLoad.forEach((img) => {
       loadImages(img);
     });
   }
+
+
+
+// ------------- Javascript to change slider on the form ----------//
+
+// When the rating input is changed by the user, update the range in the HTML
+function adjustRating(rating) {
+  document.getElementById("rate").innerHTML = rating;
+}
+
+// Allow for the first option of select to show, but not be selectable by user
+function selectResponse() {
+  const s = document.querySelector('#selected');
+  const sel = document.querySelector('#select_subject');
+  s.style.display = "block";
+  s.textContent = sel.value;
+}
