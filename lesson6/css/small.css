@@ -98,6 +98,10 @@ nav {
     color: #F1F5F9;
   }
 
+.stretch {
+    padding: 2.75rem 1.5rem;
+}
+
 #logo_image {
     height: auto; 
     width: auto;
