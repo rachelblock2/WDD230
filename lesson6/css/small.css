@@ -98,10 +98,6 @@ nav {
     color: #F1F5F9;
   }
 
-.stretch {
-    padding: 2.75rem 1.5rem;
-}
-
 #logo_image {
     height: auto; 
     width: auto;
@@ -308,7 +304,7 @@ footer a {
     color: white;
 }
 
-/* CSS for the gallery page */
+/* -------------- CSS for the gallery page --------------*/
 
 #gallery_section {
     display: grid;
