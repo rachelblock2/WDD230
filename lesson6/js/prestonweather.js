@@ -30,13 +30,14 @@ document.getElementById("currentyear").textContent = new Date().toLocaleDateStri
 
 
 
+
 // ------------- Lazy Loading of Images ----------//
 
-let imagesToLoad = document.querySelectorAll('img[data-src]');
+const imagesToLoad = document.querySelectorAll('img[data-src]');
 
 const imgOptions = {
   threshold: 0,
-  rootMargin: "0px, 0px, 50px, 0px"
+  rootMargin: "0px 0px 50px 0px"
 };
 
 // Remove placeholder image upon loading the image
@@ -75,7 +76,7 @@ imagesToLoad.forEach((img) => {
 
 
 
-// ------------- Javascript to change slider on the form ----------//
+// ------------- Change range slider on the form ----------//
 
 // When the rating input is changed by the user, update the range in the HTML
 function adjustRating(rating) {
@@ -89,3 +90,64 @@ function selectResponse() {
   s.style.display = "block";
   s.textContent = sel.value;
 }
+
+// ------------- Parse through JSON file, display Preston, Fish Haven, and Soda Springs Data ----------//
+
+const requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+
+fetch(requestURL)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (jsonObject) {
+    // console.table(jsonObject);  // temporary checking for valid response and data parsing
+    const towns = jsonObject['towns'];
+    for (let i = 0; i < towns.length; i++ ) {
+      // removes unnecessary towns from the loop
+      if (towns[i]== towns[0])
+        continue;
+      if (towns[i] == towns[2])
+        continue;
+      if (towns[i] == towns[3])
+        continue;
+      if (towns[i] == towns[4])
+        continue;
+        let caption = document.createElement('section');
+        let h2 = document.createElement('h2');
+        let h3 = document.createElement('h3')
+        let yearFounded = document.createElement('p');
+        let population = document.createElement('p');
+        let annualRain = document.createElement('p');
+        let image = document.createElement('img')
+
+        h2.textContent = towns[i].name;
+        h3.textContent = towns[i].motto;
+        yearFounded.textContent = 'Year Founded: ' + towns[i].yearFounded
+        population.textContent = 'Population: ' + towns[i].currentPopulation
+        annualRain.textContent = 'Annual Rain Fall: ' + towns[i].averageRainfall
+
+        caption.appendChild(h2);
+        caption.appendChild(h3);
+        caption.appendChild(yearFounded)
+        caption.appendChild(population)
+        caption.appendChild(annualRain)
+
+        if (towns[i] == towns[1]){
+          image.setAttribute('src', '../../lesson9/images/field_rows_large.jpg');
+          image.setAttribute('alt', 'Town of ' + h2.textContent)
+          caption.appendChild(image)
+        }
+        if (towns[i] == towns[5]) {
+          image.setAttribute('src', '../../lesson9/images/barn_at_sunset_large.jpg');
+          image.setAttribute('alt', 'Town of ' + h2.textContent)
+          caption.appendChild(image)
+        }
+        if (towns[i] == towns[6]) {
+          image.setAttribute('src', '../../lesson9/images/tree_by_field_large.jpg');
+          image.setAttribute('alt', 'Town of ' + h2.textContent)
+          caption.appendChild(image)
+        }
+
+        document.querySelector('div.town_cards').appendChild(caption);
+    }
+  });
