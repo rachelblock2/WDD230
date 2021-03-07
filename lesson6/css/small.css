@@ -569,7 +569,7 @@ form input.submitBtn {
 .town_cards {
     display: grid;
     flex-direction: row;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     margin-top: 2rem;
     column-gap: 0.3rem;
 }
@@ -578,10 +578,14 @@ form input.submitBtn {
     justify-items: center;
     flex-direction: column;
     padding: 0 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 3px dotted #F4B490;
 }
 
-.town_cards section:first-of-type h3, .town_cards section:nth-of-type(2) h3{
-    margin-bottom: 1.7rem;
+.town_cards section:nth-child(3) {
+    border-bottom: 0;
+    margin-bottom: 0;
 }
 
 .town_cards h2, .town_cards h3, .town_cards p {
@@ -589,13 +593,12 @@ form input.submitBtn {
 }
 
 .town_cards h2 {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
 }
 
 .town_cards h3 {
     font-family: "Montserrat", sans-serif;
     font-size: 0.8rem;
-    margin: 0.3rem 0 0.5rem 0;
     font-weight: 700;
 }
 
