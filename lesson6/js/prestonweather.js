@@ -151,3 +151,40 @@ fetch(requestURL)
         document.querySelector('div.town_cards').appendChild(caption);
     }
   });
+
+
+// ------------- Consume Weather API for Preston Page ---------------- //
+
+const apiURL = "https://api.openweathermap.org/data/2.5/weather?id=5604473&APPID=b850fbcd027801228eb544e5bbb816db&units=imperial"
+
+fetch(apiURL)
+  .then((response) => response.json())
+  .then((jsObject) => {
+
+    // const imagesrc = 'https://openweathermap.org/img/w/' + jsObject.weather[0].icon + '.png';  // note the concatenation
+    // const desc = jsObject.weather[0].description;  // note how we reference the weather array
+    document.querySelector('#current_1').textContent = jsObject.main.temp;
+    document.querySelector('#current_2').textContent = jsObject.main.temp_max;
+    document.querySelector('#current_4').textContent = jsObject.main.humidity;
+    document.querySelector('#current_5').textContent = jsObject.wind.speed;
+  });
+
+const apiForecast = "https://api.openweathermap.org/data/2.5/forecast?id=5604473&APPID=b850fbcd027801228eb544e5bbb816db&units=imperial"
+
+fetch(apiForecast)
+  .then((response) => response.json())
+  .then((jsObject) => {
+    let forecast = jsObject.list.filter(x => x.dt_txt.includes('18:00:00')); // Gets a new array from all forecast days at 1800 hours
+
+    const dayofWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+    for (let step = 0; step < 5; step++) {
+      // Loop through each of the next 5 forecast days
+      let d = new Date(forecast[step].dt_txt); // Creates a new date with the information from the JSON
+      let image = 'https://openweathermap.org/img/w/' + forecast[step].weather[0].icon + '.png';
+      document.querySelector(`#dayoftheweek${step+1}`).textContent = dayofWeek[d.getDay()];
+      document.querySelector(`#img${step+1}`).setAttribute('src', image)
+      document.querySelector(`#img${step+1}`).setAttribute('alt', forecast[step].weather[0].description)
+      document.querySelector(`#forecast${step+1}`).textContent = (Math.round(forecast[step].main.temp));
+    };
+  });

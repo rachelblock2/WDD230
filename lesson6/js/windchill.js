@@ -1,11 +1,12 @@
-temperature = document.querySelector("#temp_calc").innerHTML
-windSpeed = document.querySelector("#wind_speed_calc").innerHTML
+// ----------- Calculate current windchill --------- //
+temperature = document.querySelector("#current_1").innerHTML
+windSpeed = document.querySelector("#current_5").innerHTML
 
 if (temperature < 50 && windSpeed > 3) {
     totalWindChill = calcWindchill(temperature, windSpeed)
-    document.querySelector("#total_wind_speed").innerHTML = totalWindChill + "\u00B0"
+    document.querySelector("#total_wind_chill").innerHTML = totalWindChill + "\u00B0"
 } else {
-    document.querySelector("#total_wind_speed").innerHTML = "N/A"
+    document.querySelector("#total_wind_chill").innerHTML = "N/A"
 }
 
 function calcWindchill(currentTemp, currentWindSpeed) {
