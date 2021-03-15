@@ -1,0 +1,204 @@
+@media only screen and (min-width: 37.5em) {
+    .navigation {
+        font-size: 1rem;
+        font-weight: 300;
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 auto;
+        align-items: center;
+    }
+
+    .navigation li:first-child {
+        display: none;
+    }
+
+    .navigation li a {
+        flex: 1 1 auto;
+        padding: 2rem 1.5rem;
+    }
+
+    .responsive li {
+        display: none;
+    }
+
+    #logo_image {
+        height: auto; 
+        width: auto;
+        max-width: 125px; 
+        max-height: 125px;
+    }
+
+    #current_info {
+        width: 235px;
+        padding: 1rem;
+        top: 75%;
+        left: 17%;
+        position: absolute;
+    }
+    
+    #info_title{
+        font-size: 1.1rem;
+        margin: 0.2rem 1rem;
+    }
+    
+    #flex_info {
+        display: flex;
+        justify-content: center;
+    }
+    
+    #flex_info p {
+        font-size: 0.8rem;
+    }
+
+    #medium_caption {
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 63%;
+        font-size: 1.8rem;
+        color: rgb(253, 87, 87);
+    }
+
+    #small_caption, #large_caption {
+        display: none;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    h3 {
+        margin: 1rem 1rem 0.5rem 1rem;
+    }
+    
+    .day_container, .article_container, .container, .hero_container {
+        margin: 0.3rem auto 1rem auto;
+        padding: 0.5rem;
+        width: auto;
+    }
+
+    .day_item {
+        background-color:#F1F5F9;
+        padding: 0.4rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-align: center;
+        border: none;
+    }
+    
+    .day_item img, .fix_size img {
+        width: 50%;
+    }
+
+    .fix_size {
+        font-size: 1.2rem;
+        margin-top: 1.25rem;
+    }
+
+    .article_container {
+        box-shadow: 1px 1px 8px #3D3D3D;
+        margin-bottom: 1rem;
+    }
+
+    .article_container #article_image {
+        width: 40%;
+        float: right;
+        margin: 1rem 2rem 1rem 2rem;
+        border: 4px solid #F4B490;
+    }
+
+    .article_container p{
+        margin: 0.5rem 1rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #map {
+        width: 44%;
+        margin-bottom: 1rem;
+        align-self: center;
+    }
+    
+    .contact_info {
+        margin: 1rem 2rem;
+        align-self: center;
+    }
+    
+    #contact_name {
+        margin: 0.5rem;
+        font-size: 2.3rem;
+    }
+    
+    .contact_info p {
+        margin: 0.5rem;
+        font-size: 1.4rem;
+    }
+
+    /* CSS for gallery images */
+
+    #gallery_section {
+    grid-template-columns: 1fr 1fr;
+    }
+
+
+
+
+    /*----------- Home page modifications ----------- */
+
+    .town_cards {
+        grid-template-columns: 1fr;
+    }
+
+    .town_cards section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Places image to the left */
+    .town_cards section:nth-child(odd) img {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+    }
+
+    /* Places image to the right */
+    .town_cards section:nth-child(even) img {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+    }
+    
+    .town_cards p {
+        margin: 0 0 0.3rem 0;
+        font-weight: 300;
+    }
+
+    .town_cards img {
+        margin: 0;
+        grid-row-end: 6;
+        width: 90%;
+        border: 4px solid #487CAC;
+    }
+
+}
