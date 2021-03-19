@@ -7,7 +7,7 @@ body {
     background-color: #F1F5F9;
 }
 
-main, nav, #upcoming_events, h2, footer {
+main, #upcoming_events, h2 {
     margin: 1.25rem auto;
     max-width: 760px;
 }
@@ -22,9 +22,6 @@ header {
     padding-bottom: 0;
     display: flex;
     justify-content: center;
-    margin-right: 1.25rem;
-    margin-left: 1.25rem;
-    max-width: 760px;
     margin: auto;
 }
 
@@ -48,6 +45,7 @@ header {
 
 main {
     margin-top: 0.8rem;
+    margin-bottom: 0;
 }
 
 nav {

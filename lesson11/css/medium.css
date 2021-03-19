@@ -23,7 +23,7 @@
 
     .navigation li a {
         flex: 1 1 auto;
-        padding: 2rem 1.5rem;
+        padding: 1.5rem;
     }
 
     .responsive li {
@@ -33,8 +33,7 @@
     #logo_image {
         height: auto; 
         width: auto;
-        max-width: 125px; 
-        max-height: 125px;
+        max-width: 96px;
     }
 
     #current_info {
@@ -73,7 +72,7 @@
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 2.3rem;
         margin-left: 1rem;
         margin-right: 1rem;
     }
