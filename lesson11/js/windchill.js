@@ -4,9 +4,9 @@ windSpeed = document.querySelector("#current_5").innerHTML
 
 if (temperature < 50 && windSpeed > 3) {
     totalWindChill = calcWindchill(temperature, windSpeed)
-    document.querySelector("#total_wind_chill").innerHTML = totalWindChill + "\u00B0"
+    document.querySelector("#total_wind_chill").innerHTML = totalWindChill + "\u00B0";
 } else {
-    document.querySelector("#total_wind_chill").innerHTML = "N/A"
+    document.querySelector("#total_wind_chill").innerHTML = "N/A";
 }
 
 
@@ -20,10 +20,27 @@ console.log(fhWindSpeed)
 
 if (fhTemperature < 50 && fhWindSpeed > 3) {
     totalWindChill = calcWindchill(fhTemperature, fhWindSpeed)
-    document.querySelector("#fh_total_wind_chill").innerHTML = totalWindChill + "\u00B0"
+    document.querySelector("#fh_total_wind_chill").innerHTML = totalWindChill + "\u00B0";
 } else {
-    document.querySelector("#fh_total_wind_chill").innerHTML = "N/A"
+    document.querySelector("#fh_total_wind_chill").innerHTML = "N/A";
 }
+
+
+
+// ----------- Calculate current windchill on Soda Springs Page--------- //
+ssTemperature = document.querySelector("#ss_current_2").innerHTML
+ssWindSpeed = document.querySelector("#ss_current_5").innerHTML
+
+console.log(ssTemperature)
+console.log(ssWindSpeed)
+
+if (ssTemperature < 50 && ssWindSpeed > 3) {
+    totalWindChill = calcWindchill(ssTemperature, ssWindSpeed)
+    document.querySelector("#ss_total_wind_chill").innerHTML = totalWindChill + "\u00B0";
+} else {
+    document.querySelector("#ss_total_wind_chill").innerHTML = "N/A";
+}
+
 
 
 // ------- Windchill calculation function ----------//
