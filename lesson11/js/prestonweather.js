@@ -1,5 +1,3 @@
-// Fixes: add specific javascript pages, fix windchill
-
 // ------------- Banner for free pancakes on Friday ----------//
 let date = new Date();
 let weekday = date.toLocaleDateString("default", { weekday: 'long' });
@@ -31,58 +29,8 @@ function selectResponse() {
   s.textContent = sel.value;
 }
 
-// ------------- Parse through JSON file, display Preston, Fish Haven, and Soda Springs Info on homepage ----------//
 
-const requestdata = 'https://byui-cit230.github.io/weather/data/towndata.json';
-
-fetch(requestdata)
-  .then((response) => response.json())
-  .then((jsonObject) => {
-    const towns = jsonObject['towns'];
-
-    // Determines the file name
-    var path = window.location.pathname;
-    var pageURL = path.split('/').pop();
-  
-    let eventBox = document.createElement('div');
-    let event1 = document.createElement('p');
-    let event2 = document.createElement('p');
-    let event3 = document.createElement('p');
-
-    townIndex = selectTown(pageURL) // Returns the index of the town in the JSON file
-
-    // Adds the information of the town JSON data to the HTML
-    event1.textContent = towns[townIndex].events[0];
-    event2.textContent = towns[townIndex].events[1];
-    event3.textContent = towns[townIndex].events[2];
-    if (townIndex == 2) {
-      let event4 = document.createElement('p');
-      event4.textContent = towns[townIndex].events[3];
-    }
-
-    eventBox.appendChild(event1);  
-    eventBox.appendChild(event2);
-    eventBox.appendChild(event3);
-    if (townIndex == 2) {
-      eventBox.appendChild(event4);
-    }
-
-    document.querySelector('#upcoming_events').appendChild(eventBox);
-  });
-
-  function selectTown(pageURL) {
-    if (pageURL == 'preston.html') {
-      index = 6
-    } else if (pageURL == 'fishhaven.html') {
-      index = 2
-    } else if (pageURL == 'sodasprings.html') {
-      index = 0
-    }
-    return index
-  }
-
-
-// ------------- Consume Weather API for Preston Page ---------------- //
+// ------------- Consume Weather and Forecast API for Preston Page ---------------- //
 
 const apiURL = "https://api.openweathermap.org/data/2.5/weather?id=5604473&APPID=b850fbcd027801228eb544e5bbb816db&units=imperial"
 
@@ -115,3 +63,15 @@ fetch(apiForecast)
       document.querySelector(`#forecast${step+1}`).textContent = (Math.round(forecast[step].main.temp));
     };
   });
+
+
+// ----------- Calculate current windchill on Preston Page--------- //
+temperature = document.querySelector("#current_2").innerHTML
+windSpeed = document.querySelector("#current_5").innerHTML
+
+if (temperature < 50 && windSpeed > 3) {
+    totalWindChill = calcWindchill(temperature, windSpeed)
+    document.querySelector("#total_wind_chill").innerHTML = totalWindChill + "\u00B0";
+} else {
+    document.querySelector("#total_wind_chill").innerHTML = "N/A";
+}
