@@ -293,6 +293,11 @@ h4 {
     text-align: center;
 }
 
+.link a {
+    font-weight: 700;
+    color: #487CAC;
+}
+
 #map {
     width: 100%;
     margin: 0 auto;
