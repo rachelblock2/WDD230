@@ -1,5 +1,3 @@
-// TODO: validate the html, css, and javascript. 
-
 // ------------- Hamburger button for small CSS ----------//
 
 const hambutton = document.querySelector('.hamburger_menu');
@@ -103,17 +101,17 @@ fetch(requestURL)
         caption.appendChild(annualRain)
 
         if (towns[i] == towns[0]){
-          image.setAttribute('src', '../../lesson9/images/field_rows_large.jpg');
+          image.setAttribute('src', 'images/field_rows_large.jpg');
           image.setAttribute('alt', 'Town of ' + h2.textContent)
           caption.appendChild(image)
         }
         if (towns[i] == towns[2]) {
-          image.setAttribute('src', '../../lesson9/images/barn_at_sunset_large.jpg');
+          image.setAttribute('src', 'images/barn_at_sunset_large.jpg');
           image.setAttribute('alt', 'Town of ' + h2.textContent)
           caption.appendChild(image)
         }
         if (towns[i] == towns[6]) {
-          image.setAttribute('src', '../../lesson9/images/tree_by_field_large.jpg');
+          image.setAttribute('src', 'images/tree_by_field_large.jpg');
           image.setAttribute('alt', 'Town of ' + h2.textContent)
           caption.appendChild(image)
         }

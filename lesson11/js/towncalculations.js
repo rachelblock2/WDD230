@@ -7,7 +7,7 @@ function calcWindchill(currentTemp, currentWindSpeed) {
 
 
 
-// ------------- Parse through JSON file, display Preston, Fish Haven, and Soda Springs Info on homepage ----------//
+// ------------- Parse through JSON file, display Preston, Fish Haven, and Soda Springs Info on each respective town's pages ----------//
 
 const requestdata = 'https://byui-cit230.github.io/weather/data/towndata.json';
 
