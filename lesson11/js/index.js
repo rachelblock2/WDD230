@@ -1,3 +1,5 @@
+// TODO: validate the html, css, and javascript. 
+
 // ------------- Hamburger button for small CSS ----------//
 
 const hambutton = document.querySelector('.hamburger_menu');
