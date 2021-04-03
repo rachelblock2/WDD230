@@ -2,28 +2,28 @@
   "Businesses": [
     {
       "name": "Taqueria 27",
-      "image_link": "../images/taqueria_27.png",
+      "image_link": "images/taqueria_27.png",
       "phone": "(801)676-9706",
       "email": "customerservice@taqueria27.com",
       "website": "taqueria27.com"
     },
     {
       "name": "Tony Burgers",
-      "image_link": "../images/tony_burgers.png",
+      "image_link": "images/tony_burgers.png",
       "phone": "(801)676-9686",
       "email": "MANAGER@TONYBURGERS.COM",
       "website": "tonyburgers.com"
     },
     {
       "name": "Great Harvest Bread",
-      "image_link": "../images/great_harvest_bread.svg",
+      "image_link": "images/great_harvest_bread.svg",
       "phone": "(801)277-3277",
       "email": "N/A",
       "website": "greatharvestutah.com/holladay"
     },
     {
       "name": "Auntie Rae's Dessert Island",
-      "image_link": "../images/auntie_raes.png",
+      "image_link": "images/auntie_raes.png",
       "phone": "(801)679-3925",
       "email": "info@ardi.biz",
       "website": "auntieraesdessertisland.com"
@@ -37,14 +37,14 @@
     },
     {
       "name": "Leslie's Bakery",
-      "image_link": "../images/placeholder.png",
+      "image_link": "images/placeholder.png",
       "phone": "(866)469-9935",
       "email": "N/A",
       "website": "N/A"
     },
     {
       "name": "Top-It Yogurt",
-      "image_link": "../images/placeholder.png",
+      "image_link": "images/placeholder.png",
       "phone": "(801)272-0278",
       "email": "N/A",
       "website": "top-it-frozen-yogurt-plus.business.site"
