@@ -258,6 +258,11 @@ h1 {
     font-family: 'Raleway', sans-serif;
 }
 
+.business_highlights div {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .business_highlights img {
     width: 100%;
 }

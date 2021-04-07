@@ -14,6 +14,7 @@ fetch(holladayJSON)
 
         let caption = document.createElement('section');
         let h2 = document.createElement('h2');
+        let div = document.createElement('div');
         let image = document.createElement('img');
         let phone = document.createElement('p');
         let email = document.createElement('p');
@@ -27,7 +28,9 @@ fetch(holladayJSON)
         image.setAttribute('src', Businesses[i].image_link);
         image.setAttribute('alt', h2.textContent + Businesses[i].order);
 
-        caption.appendChild(image);
+        div.appendChild(image);
+
+        caption.appendChild(div);
         caption.appendChild(h2);
         caption.appendChild(phone);
         caption.appendChild(email);
