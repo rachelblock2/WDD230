@@ -1,0 +1,32 @@
+/* @media only screen and (min-width: 37.5em) {
+    .nav_menu {
+        font-size: 1rem;
+        font-weight: 300;
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .nav_menu li {
+        display: block;
+        flex: 1 1 auto;
+        align-items: center;
+    }
+
+    .nav_menu li:first-child {
+        display: none;
+    }
+
+    .nav_menu li a {
+        flex: 1 1 auto;
+        padding: 1.5rem;
+    }
+
+    .small_menu li {
+        display: none;
+    }
+} */
