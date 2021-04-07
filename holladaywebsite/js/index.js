@@ -49,9 +49,8 @@ fetch(apiURL)
   .then((response) => response.json())
   .then((jsObject) => {
     console.log(jsObject)
-    document.querySelector('#current_1').textContent = jsObject.current.temp;
+    document.querySelector('#current_1').textContent = (Math.round(jsObject.current.temp));
     document.querySelector('#current_2').textContent = jsObject.current.weather[0].description;
-    // (Math.round(jsObject.main.temp));
     document.querySelector('#current_3').textContent = jsObject.current.humidity;
   });
 
