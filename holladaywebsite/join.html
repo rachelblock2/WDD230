@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weathermylife Home</title>
+    <meta name="Home page for Weathermylife site" content="Landing page general content for Weathermylife site" />
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,700&family=Raleway:wght@100;200;300;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/small.css" rel="stylesheet" />
+    <link href="css/medium.css" rel="stylesheet" />
+    <link href="css/large.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+        <img id="logo_image" src = "images/logo.png" alt = "Website logo"/>
+        <nav>
+            <ul class="nav_menu">
+            <li><a class="hamburger_menu" href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
+            <li><a class = "button" href="index.html">HOME</a></li>
+            <li><a class = "button" href="city.html">CITY OF HOLLADAY</a></li>
+            <li><a class = "button active" href="join.html">JOIN US</a></li>
+            <li><a class = "button" href="directory.html">BUSINESSES</a></li>
+            <li><a class = "button" href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+
+        <picture>
+          <source srcset="images/hero_images/join_medium.jpg" media="(min-width:
+          37.5em) and (max-width: 59.9em)">
+          <source srcset="images/hero_images/join_large.jpg" media="(min-width:
+          60em)">
+          <img id="hero_image" src = "images/hero_images/join_small.jpg" alt = "Mount Olympus in Holladay" loading="lazy"/>
+        </picture>
+
+        <p id="join_hero_text">Come work together with us to make Holladay a better place.</p>
+    </header>
+    <main>
+        <section>
+            <h1>Application for the Chamber of Commerce</h1>
+            <form method="get" action="confirmation.html">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label class="top">Title <input type="text" name="title" pattern="[A-Za-z\s]"></label>
+                    <label class="top">First Name* <input type="text" name="fname" placeholder="Jane" pattern="[A-Za-z\s]{2,}" required></label>
+                    <label class="top">Last Name* <input type="text" name="lname" placeholder="Smith" pattern="[A-Za-z\s]{2,}" required></label>
+                    <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                    <label class="top">Phone <input type="tel" name="phone" placeholder="1235551234"></label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Business Information</legend>
+                    <label class="top">Business Name* <input type="text" name="bname" placeholder="United Co." pattern="[A-Za-z\s]{2,}" required></label>
+                    <label class="top">Business Address<input type="text" name="baddress" pattern="[a-zA-Z0-9\s]+"></label>
+                    <label class="top">Business Website<input type="url" name="burl" pattern="[a-zA-Z0-9]+\.[a-zA-Z]+"></label>
+                    <label class="top">Business Description<textarea id="add_info" name="bdescription" rows="5" cols="33"></textarea></label>          
+                </fieldset>
+
+                <fieldset>
+                    <legend>Membership Information</legend>
+                    <label class="sbs"><input type="radio" name="member_level" value="100">Non-profit ($100)</label>
+                    <label class="sbs"><input type="radio" name="member_level" value="200">Bronze ($200)</label>
+                    <label class="sbs"><input type="radio" name="member_level" value="400">Silver ($400)</label>
+                    <label class="sbs"><input type="radio" name="member_level" value="1000">Gold ($1000)</label>
+                    <div id="member_info"></div>
+                </fieldset>
+
+                <input type="submit" value="Apply for Membership" class="applyBtn" action="thanks.html" method="get" target="_blank">
+
+            </form>   
+        </section>
+    </main>
+
+    <footer>
+      <div>Last Modified: <span id="currentyear"></span> | Rachel Lofgran | Utah | <a href="https://www.byui.edu/online">BYUI Online Learning</a>
+      </div>
+    </footer>
+  <script src="js/index.js"></script>
+  </body>
+</html>

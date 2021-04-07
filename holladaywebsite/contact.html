@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weathermylife Home</title>
+    <meta name="Home page for Weathermylife site" content="Landing page general content for Weathermylife site" />
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,700&family=Raleway:wght@100;200;300;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/small.css" rel="stylesheet" />
+    <link href="css/medium.css" rel="stylesheet" />
+    <link href="css/large.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+        <img id="logo_image" src = "images/logo.png" alt = "Website logo"/>
+        <nav>
+            <ul class="nav_menu">
+            <li><a class="hamburger_menu" href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
+            <li><a class = "button" href="index.html">HOME</a></li>
+            <li><a class = "button" href="city.html">CITY OF HOLLADAY</a></li>
+            <li><a class = "button" href="join.html">JOIN US</a></li>
+            <li><a class = "button" href="directory.html">BUSINESSES</a></li>
+            <li><a class = "button active" href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+
+        <picture>
+          <source srcset="images/hero_images/contact_us_medium.jpg" media="(min-width:
+          37.5em) and (max-width: 59.9em)">
+          <source srcset="images/hero_images/contact_us_large.jpg" media="(min-width:
+          60em)">
+          <img id="hero_image" src = "images/hero_images/contact_us_small.jpg" alt = "Mount Olympus in Holladay" loading="lazy"/>
+        </picture>
+
+        <p id="hero_text">Holladay. Learning and working together to build a stronger and safer community.</p>
+        <button>Apply Now</button>
+    </header>
+    <main>
+    </main>
+
+    <footer>
+      <div>Last Modified: <span id="currentyear"></span> | Rachel Lofgran | Utah | <a href="https://www.byui.edu/online">BYUI Online Learning</a>
+      </div>
+    </footer>
+  <script src="js/index.json"></script>
+  <script src="js/index.js"></script>
+  </body>
+</html>

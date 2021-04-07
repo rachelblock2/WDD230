@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weathermylife Home</title>
+    <meta name="Home page for Weathermylife site" content="Landing page general content for Weathermylife site" />
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,700&family=Raleway:wght@100;200;300;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/small.css" rel="stylesheet" />
+    <link href="css/medium.css" rel="stylesheet" />
+    <link href="css/large.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+        <img id="logo_image" src = "images/logo.png" alt = "Website logo"/>
+        <nav>
+            <ul class="nav_menu">
+              <li><a class="hamburger_icon" href="#">&#9776; Menu</a></li>
+              <li><a class = "button active" href="index.html">HOME</a></li>
+              <li><a class = "button" href="city.html">CITY OF HOLLADAY</a></li>
+              <li><a class = "button" href="join.html">JOIN US</a></li>
+              <li><a class = "button" href="directory.html">BUSINESSES</a></li>
+              <li><a class = "button" href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+
+        <picture>
+          <source srcset="images/hero_images/home_medium.jpg" media="(min-width:
+          37.5em) and (max-width: 59.9em)">
+          <source srcset="images/hero_images/home_large.jpg" media="(min-width:
+          60em)">
+          <img id="hero_image" src = "images/hero_images/home_small.jpg" alt = "Mount Olympus in Holladay" loading="lazy"/>
+        </picture>
+
+        <p id="hero_text">Holladay. Learning and working together to build a stronger and safer community.</p>
+        <a href="join.html"><button>Apply Now</button></a>
+    </header>
+    <main>
+        <div class="grid_layout">
+          <h1>Our Purpose</h1>
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+              non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class="main_grid_layout">
+          <h1>Weather for you. Here everyday.</h1>
+          <div>
+            <div id="current_1"></div>
+            <div id="current_2"></div>
+            <div id="current_3"></div>
+            <div id="weather">Here's where the forecast will be</div>
+          </div>
+        </div>
+
+        <div class="business_highlights"></div>
+        
+        <div class="main_grid_layout">
+          <h1>Holladay Events. Enjoy the community of Holladay!</h1>
+          <div>
+            <p></p>
+            <p>April 17: Ring in Spring Picnic</p>
+            <p>May 29: Annual Memorial Day Grave Cleaning</p>
+            <p>June 19: Splash into Summer Party</p>
+          </div>
+        </div>
+
+        <div class="main_grid_layout">
+          <h1>Have Questions? Reach out to us!</h1>
+          <p>(385)429-2921</p>
+          <p>hello@holladaychamber.com</p>
+          <img src="images/caputos.png" alt="Google Map of Holladay">
+          <div>
+            <p>4580 South 2300 East</p>
+            <p>Holladay, Utah 84117</p>
+          </div>
+        </div>
+
+    </main>
+
+    <footer>
+      <div>Last Modified: <span id="currentyear"></span> | Rachel Lofgran | Utah | <a href="https://www.byui.edu/online">BYUI Online Learning</a>
+      </div>
+    </footer>
+  <script src="js/index.js"></script>
+  <script src="js/drop_down.js"></script>
+  </body>
+</html>
