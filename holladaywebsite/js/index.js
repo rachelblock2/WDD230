@@ -12,23 +12,24 @@ fetch(holladayJSON)
     const Businesses = jsObject['Businesses'];
     for (let i = 0; i < 3; i++ ) {
 
+        const randomBusiness = Businesses[Math.floor(Math.random() * Businesses.length)];
+
         let caption = document.createElement('section');
         let h2 = document.createElement('h2');
-        let div = document.createElement('div');
+        let div = document.createElement('div')
         let image = document.createElement('img');
         let phone = document.createElement('p');
         let email = document.createElement('p');
         let website = document.createElement('p');
 
-        h2.textContent = Businesses[i].name;
-        phone.textContent = 'Phone: ' + Businesses[i].phone;
-        email.textContent = 'Email: ' + Businesses[i].email;
-        website.textContent = 'Website: ' + Businesses[i].website;
+        h2.textContent = randomBusiness.name;
+        phone.textContent = 'Phone: ' + randomBusiness.phone;
+        email.textContent = 'Email: ' + randomBusiness.email;
+        website.textContent = 'Website: ' + randomBusiness.website;
 
-        image.setAttribute('src', Businesses[i].image_link);
-        image.setAttribute('alt', h2.textContent + Businesses[i].order);
-
-        div.appendChild(image);
+        image.setAttribute('src', randomBusiness.image_link);
+        image.setAttribute('alt', h2.textContent + randomBusiness.order);
+        div.appendChild(image)
 
         caption.appendChild(div);
         caption.appendChild(h2);
@@ -47,8 +48,10 @@ const apiURL = "https://api.openweathermap.org/data/2.5/onecall?lat=40.669057076
 fetch(apiURL)
   .then((response) => response.json())
   .then((jsObject) => {
-    document.querySelector('#current_1').textContent = (Main.round(jsObject.current.temp));
+    console.log(jsObject)
+    document.querySelector('#current_1').textContent = jsObject.current.temp;
     document.querySelector('#current_2').textContent = jsObject.current.weather[0].description;
+    // (Math.round(jsObject.main.temp));
     document.querySelector('#current_3').textContent = jsObject.current.humidity;
   });
 
