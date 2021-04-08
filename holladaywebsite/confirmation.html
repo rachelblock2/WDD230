@@ -18,7 +18,7 @@
         <img id="logo_image" src = "images/logo.png" alt = "Website logo"/>
         <nav>
             <ul class="nav_menu">
-            <li><a class="hamburger_menu" href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
+            <li><a class="hamburger_icon" href="#">&#9776; Menu</a></li>
             <li><a class = "button" href="index.html">HOME</a></li>
             <li><a class = "button" href="city.html">CITY OF HOLLADAY</a></li>
             <li><a class = "button active" href="join.html">JOIN US</a></li>
@@ -26,7 +26,15 @@
             <li><a class = "button" href="contact.html">CONTACT US</a></li>
             </ul>
         </nav>
-        <img id="hero_image" src = "images/new_hero_test.jpg" alt = "Website logo"/>
+
+        <picture>
+          <source srcset="images/hero_images/join_medium.jpg" media="(min-width:
+          37.5em) and (max-width: 59.9em)">
+          <source srcset="images/hero_images/join_large.jpg" media="(min-width:
+          60em)">
+          <img id="hero_image" src = "images/hero_images/join_small.jpg" alt = "Mount Olympus in Holladay" loading="lazy"/>
+        </picture>
+
         <p id="confirmation_hero_text">Thank you!</p>
     </header>
     <main id="confirmation">
@@ -40,5 +48,6 @@
         </div>
     </footer>
     <script src="js/index.js"></script>
+    <script src="js/drop_down.js"></script>
     </body>
   </html>

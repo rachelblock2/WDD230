@@ -1,4 +1,4 @@
-/* @media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 37.5em) {
     .nav_menu {
         font-size: 1rem;
         font-weight: 300;
@@ -12,21 +12,30 @@
     }
 
     .nav_menu li {
+        display: none;
+    }
+
+    .medium_menu li:nth-child(1), .medium_menu li:nth-child(2), .medium_menu li:nth-child(3) {
         display: block;
-        flex: 1 1 auto;
-        align-items: center;
     }
 
     .nav_menu li:first-child {
-        display: none;
+        display: block;
     }
 
     .nav_menu li a {
         flex: 1 1 auto;
-        padding: 1.5rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .small_menu li:nth-child(2), .small_menu li:nth-child(3) {
+        display: none;
     }
 
     .small_menu li {
-        display: none;
+        display: block;
+        flex: 1 1 auto;
+        list-style-type: none;
+        align-items: center;
     }
-} */
+}

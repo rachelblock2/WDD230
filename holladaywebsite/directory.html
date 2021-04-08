@@ -18,7 +18,7 @@
         <img id="logo_image" src = "images/logo.png" alt = "Website logo"/>
         <nav>
             <ul class="nav_menu">
-            <li><a class="hamburger_menu" href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
+            <li><a class="hamburger_icon" href="#">&#9776; Menu</a></li>
             <li><a class = "button" href="index.html">HOME</a></li>
             <li><a class = "button" href="city.html">CITY OF HOLLADAY</a></li>
             <li><a class = "button" href="join.html">JOIN US</a></li>
@@ -35,17 +35,28 @@
           <img id="hero_image" src = "images/hero_images/business_small.jpg" alt = "Mount Olympus in Holladay" loading="lazy"/>
         </picture>
 
-        <p id="hero_text">Holladay. Learning and working together to build a stronger and safer community.</p>
-        <button>Apply Now</button>
+        <p id="directory_hero_text">Holladay Businesses</p>
     </header>
+
     <main>
+      <div class="grid_layout">
+        <h1>Holladay Businesses of Note</h1>
+        <div id="icon">
+          <img id="grid_icon" src="images/grid_icon.svg" alt="Grid view option"/>
+          <img id="bar_icon" src="images/list_icon.svg" alt="List view option"/>
+        </div>
+      </div>
+
+      <div class="business_cards">
+      </div>
+
     </main>
 
     <footer>
       <div>Last Modified: <span id="currentyear"></span> | Rachel Lofgran | Utah | <a href="https://www.byui.edu/online">BYUI Online Learning</a>
       </div>
     </footer>
-  <script src="js/index.json"></script>
-  <script src="js/index.js"></script>
+  <script src="js/drop_down.js"></script>
+  <script src="js/directory.js"></script>
   </body>
 </html>

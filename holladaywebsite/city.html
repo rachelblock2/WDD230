@@ -18,7 +18,7 @@
         <img id="logo_image" src = "images/logo.png" alt = "Website logo"/>
         <nav>
             <ul class="nav_menu">
-            <li><a class="hamburger_menu" href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
+            <li><a class="hamburger_icon" href="#">&#9776; Menu</a></li>
             <li><a class = "button" href="index.html">HOME</a></li>
             <li><a class = "button active" href="city.html">CITY OF HOLLADAY</a></li>
             <li><a class = "button" href="join.html">JOIN US</a></li>
@@ -39,21 +39,26 @@
     </header>
     <main>
       <div class="grid_layout">
-        <h1>Fast facts about Holladay currently</h1>
-          <ul>
-            <li>First</li>
-            <li>Second</li>
-            <li>Third</li>
-            <li>Fourth</li>
-            <li>Fifth</li>
-            <li>Sixth</li>
-          </ul>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
-             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-             non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h1>Holladay in words</h1>
+          <p>Nestled in the shadow of Mount Olympus, the city of Holladay is small and pleasant.
+          There are quiet, suburban neighborhoods that surround the main city block, with many trees
+          and plant growth interspersed. The city block itself has small, locally owned businesses.
+          Enjoy a taco from Taqueria 27 as you watch the traffic go by. Then take a walk down to the
+          park, where you will find a large field for many outdoor activities and a sprawling playground
+          for your children to enjoy. Finish your time in Holladay by enjoying some pineapple dole whip
+          at Auntie Rae's Dessert Island as the sun sets behind the oquirrah mountains.</p>
+      </div>
+
+      <div class="grid_layout">
+        <ul>
+          <li>As of the 2019 census:</li>
+          <li>Estimated Population: 30,325</li>
+          <li>People with a high school degree+, ages 25+ years: 97.7%</li>
+          <li>People with a bachelor's degree+, ages 25+ years: 55.8%</li>
+          <li>People in civilian labor force, ages 16+ years: 64.6%</li>
+          <li>Median Household Income: $88,728</li>
+          <li>All businesses for profit: 3,591</li>
+        </ul>
       </div>
 
       <div>
@@ -62,15 +67,27 @@
 
             <div class="event_row">
               <div id="top_event_choice1">
-                <img src="images/caputos.png" alt="The creation of Holladay">
+                <img src="images/john_holladay.jpg" alt="John Holladay">
                 <p id="choice1_text"></p>
               </div>
               <div id="top_event_choice3">
-                <img src="images/great_harvest_bread.svg" alt="">
+                <picture>
+                  <source srcset="images/cottonwood_mall_medium.jpg" media="(min-width:
+                  37.5em) and (max-width: 59.9em)">
+                  <source srcset="images/cottonwood_mall_large.jpg" media="(min-width:
+                  60em)">
+                  <img src = "images/cottonwood_mall_small.jpg" alt = "Cottonwood Mall" loading="lazy"/>
+                </picture>
                 <p id="choice3_text"></p>
               </div>
               <div id="top_event_choice5">
-                <img src="images/caputos.png" alt="">
+                <picture>
+                  <source srcset="images/harmons_medium.jpg" media="(min-width:
+                  37.5em) and (max-width: 59.9em)">
+                  <source srcset="images/harmons_large.jpg" media="(min-width:
+                  60em)">
+                  <img src = "images/harmons_small.jpg" alt = "Cottonwood Mall" loading="lazy"/>
+                </picture>
                 <p id="choice5_text"></p>
               </div>
             </div>
@@ -80,11 +97,11 @@
 
             <div class="event_row">
               <div id="bottom_event_choice2">
-                <img src="images/taqueria_27.png" alt="">
+                <img src="images/knudsens_corner.jpg" alt="Knudsen's corner">
                 <p id="choice2_text"></p>
               </div>
               <div id="bottom_event_choice4">
-                <img src="images/tony_burgers.png" alt="">
+                <img src="images/expansion.jpg" alt="John Holladay">
                 <p id="choice4_text"></p>
               </div>
             </div>
@@ -107,5 +124,7 @@
       </div>
     </footer>
   <script src="js/index.js"></script>
+  <script src="js/drop_down.js"></script>
+  <script src="js/city.js"></script>
   </body>
 </html>
