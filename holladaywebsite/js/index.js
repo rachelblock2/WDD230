@@ -1,6 +1,3 @@
-// Adds last modified date to the footer
-document.getElementById("currentyear").textContent = document.lastModified;
-
 // Looping through JSON files for businesses on homepage
 
 const holladayJSON = 'https://rachelblock2.github.io/holladaywebsite/js/index.json';
@@ -56,11 +53,12 @@ fetch(apiURL)
     const dayofWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
     for (let step = 0; step < 3; step++) {
+        let image = 'https://openweathermap.org/img/w/' + jsObject.daily[step].weather[0].icon + '.png';
         let d = new Date((jsObject.daily[step].dt)* 1000).getDay();
         document.querySelector(`#dayoftheweek${step+1}`).textContent = dayofWeek[d];
         console.log(dayofWeek[d])
-        // document.querySelector(`#img${step+1}`).setAttribute('src', image)
-        // document.querySelector(`#img${step+1}`).setAttribute('alt', forecast[step].weather[0].description)
-        // document.querySelector(`#forecast${step+1}`).textContent = (Math.round(forecast[step].main.temp));
+        document.querySelector(`#img${step+1}`).setAttribute('src', image)
+        document.querySelector(`#img${step+1}`).setAttribute('alt', jsObject.daily[step].weather[0].description)
+        document.querySelector(`#forecast${step+1}`).textContent = (Math.round(jsObject.daily[step].temp.day));
     }
   });

@@ -15,3 +15,6 @@ window.onresize = () => {
         navHolder.classList.remove('small_menu');
     }
 };
+
+// Adds last modified date to the footer
+document.getElementById("currentyear").textContent = document.lastModified;

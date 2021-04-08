@@ -77,11 +77,11 @@ nav {
 
 #hero_text, #city_hero_text, #join_hero_text, #confirmation_hero_text, #directory_hero_text, #contact_hero_text {
     position: absolute;
-    top: 32%;
+    top: 15%;
     display: block;
     font-weight: 900;
-    font-size: 2.7rem;
-    line-height: 3rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
     margin: 0;
     padding: 2.5rem;
     background-color: rgba(11, 71, 44, 0.8);
@@ -116,11 +116,11 @@ nav {
 header button {
     position: absolute;
     bottom: 25%;
-    right: 32%;
+    right: 11%;
     font-family: 'Raleway', sans-serif;
-    font-size: 1rem;
+    font-size: 0.8rem;
     border-radius: 36px;
-    padding: 1.5rem;
+    padding: 1.6rem;
     background-color: #8A8C87;
     color: #FFFFFF;
     outline: none;
@@ -149,7 +149,7 @@ h1 {
 
 .grid_layout {
     display: grid;
-    grid-template-columns: 1fr 440px 1fr;
+    grid-template-columns: 1fr;
     margin: 0 auto;
 }
 
@@ -194,6 +194,10 @@ h1 {
 
 .grid_layout #icon img {
     width: 10%;
+}
+
+#bar_icon {
+    cursor: pointer;
 }
 
 
@@ -253,18 +257,18 @@ h1 {
     color: white;
 }
 
-#current_1, #current_2, #current_3, #weather {
+#current_1, #current_2, #current_3 {
     padding: 0 3rem;
     text-transform: capitalize;
 }
 
 .main_grid_layout:nth-child(5) img {
-    width: 80%;
+    width: 50%;
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 4;
-    margin: 0;
+    margin: 0 0 0 3rem;
     padding: 0 3rem;
 }
 
@@ -272,8 +276,21 @@ h1 {
     margin: 0;
 }
 
+#weather {
+    display: flex;
+    flex-direction: row;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
 
-
+.weather_item p {
+    margin: 0;
+}
 
 /* ---------- Styles for other sections on the home page ------------- */
 
@@ -619,12 +636,42 @@ form input.applyBtn {
 }
 
 
+/* ---------- Contact Styles ------------- */
+
+.contact_grid_layout {
+    display: block;
+    margin: 0 auto;
+    column-gap: 1rem;
+}
+
+.contact_grid_layout h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.8rem;
+    margin: 0.5rem 0;
+    padding-top: 1rem;
+    line-height: 3rem;
+}
+
+.contact_grid_layout p {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.contact_grid_layout img {
+    float: right;
+    width: 30%;
+    margin-right: 7rem;
+    margin-bottom: 2rem;
+}
+
 /* ---------- Footer Styles ------------- */
 
 footer {
     background-color: #0B472C;
     text-align: center;
     font-family: 'Raleway', sans-serif;
+    clear: both;
 }
 
 footer a {

@@ -1,8 +1,16 @@
-// Looping through JSON files for businesses on homepage
+const barView = document.querySelector('#bar_icon')
+const cardHolder = document.querySelector('.business_cards')
 
-const businessJSON = 'https://rachelblock2.github.io/holladaywebsite/js/index.json';
+barView.addEventListener('click', () => {
+    cardHolder.classList.toggle('business_card_bars')
+}, false);
 
-fetch(businessJSON)
+
+// Looping through JSON file for businesses
+
+const businessList = 'https://rachelblock2.github.io/holladaywebsite/js/directory.json';
+
+fetch(businessList)
   .then((response) => 
   response.json())
   .then((jsObject) => {
@@ -35,27 +43,3 @@ fetch(businessJSON)
         document.querySelector('.business_cards').appendChild(caption);
     }
   });
-
-// // Add our event listeners
-// window.addEventListener('click', someFunction, false);
-// window.addEventListener('mouseover', someFunction, false);
-
-
-const gridView = document.querySelector('#grid_icon')
-const barView = document.querySelector('#bar_icon')
-const cardHolder = document.querySelector('.business_cards')
-
-// // Setup our function to run on various events
-// let changeLayout = layout (change) {
-//     if (cardHolder.classList.contains('business_cards')) {
-//         cardHolder.classList.toggle('business_card_bars')
-//     });
-// };
-
-gridView.addEventListener('click', () => {
-    cardHolder.classList.toggle('business_cards')
-}, false);
-
-barView.addEventListener('click', () => {
-    cardHolder.classList.toggle('business_card_bars')
-}, false);
