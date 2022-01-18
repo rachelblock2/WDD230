@@ -14,6 +14,7 @@ fetch(businessList)
   .then((response) => 
   response.json())
   .then((jsObject) => {
+    console.log(jsObject);
     const Businesses = jsObject['Businesses'];
     for (let i = 0; i < 7; i++ ) {
 
@@ -25,13 +26,13 @@ fetch(businessList)
         let email = document.createElement('p');
         let website = document.createElement('p');
 
-        h2.textContent = Businesses.name;
-        phone.textContent = 'Phone: ' + Businesses.phone;
-        email.textContent = 'Email: ' + Businesses.email;
-        website.textContent = 'Website: ' + Businesses.website;
+        h2.textContent = Businesses[i].name;
+        phone.textContent = 'Phone: ' + Businesses[i].phone;
+        email.textContent = 'Email: ' + Businesses[i].email;
+        website.textContent = 'Website: ' + Businesses[i].website;
 
-        image.setAttribute('src', Businesses.image_link);
-        image.setAttribute('alt', h2.textContent + Businesses.order);
+        image.setAttribute('src', Businesses[i].image_link);
+        image.setAttribute('alt', h2.textContent + Businesses[i].order);
         div.appendChild(image)
 
         caption.appendChild(div);
