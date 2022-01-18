@@ -8,7 +8,7 @@ barView.addEventListener('click', () => {
 
 // Looping through JSON file for businesses
 
-const businessList = 'https://rachelblock2.github.io/holladaywebsite/js/directory.json';
+const businessList = 'https://rachelblock2.github.io/WDD230/holladaywebsite/js/directory.json';
 
 fetch(businessList)
   .then((response) => 
