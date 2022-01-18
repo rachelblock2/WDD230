@@ -6,7 +6,7 @@ barView.addEventListener('click', () => {
 }, false);
 
 
-// Looping through JSON file for businesses
+// Looping through JSON file for businesses, json published on github
 
 const businessList = 'https://rachelblock2.github.io/WDD230/holladaywebsite/js/directory.json';
 
